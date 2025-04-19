@@ -41,7 +41,7 @@ Created by **Anas Mohamed** as part of a developer challenge / personal growth p
 ## 💻 How to Run Locally
 
 1. Clone the repository  
-   `git clone https://github.com/aamohamedo/TaskManagerApi.git`
+   `git clone https://github.com/aamohamedo/TaskManagerApiNew`
 
 2. Navigate into the project  
    `cd TaskManagerApi`
