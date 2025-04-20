@@ -1,18 +1,21 @@
-# 📋 TaskManager API
+# 🧠 Task Manager API
 
-A simple and efficient ASP.NET Core Web API project built for managing tasks.  
-Created by **Anas Mohamed** as part of a developer challenge / personal growth project.
+This is the **backend API** for the Task Manager system. It is built using **ASP.NET Core Web API** and provides RESTful endpoints to manage tasks (create, read, update, delete).
+
+> ⚠️ **Note:** This API must be running before launching the [TaskManagerFrontend](https://github.com/aamohamedo/TaskManagerFrontend) application.
 
 ---
 
-## 🚀 Features
+## 📋 Features
 
-- ✅ Get all tasks
-- 📌 Get a specific task by ID
-- ➕ Create a task
-- ✏️ Update a task
-- 🗑️ Delete a task
-- 🔍 Swagger UI support for live testing
+✅ Get all tasks  
+✅ Get a single task by ID  
+✅ Create a new task  
+✅ Update an existing task  
+✅ Delete a task  
+✅ Built-in validation and error handling  
+✅ XML documentation enabled for all endpoints  
+✅ Swagger UI for interactive API documentation
 
 ---
 
@@ -28,13 +31,13 @@ Created by **Anas Mohamed** as part of a developer challenge / personal growth p
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠 Tech Stack
 
-- ASP.NET Core Web API (.NET 6 / .NET 8)
-- C#
-- Entity Framework Core
-- SQL Server
-- Swagger
+- **ASP.NET Core Web API** (.NET 8)
+- **Entity Framework Core** (Code First)
+- **SQL Server LocalDB**
+- **Swagger / Swashbuckle.AspNetCore**
+- **xUnit + Moq** for unit testing
 
 ---
 
@@ -46,13 +49,14 @@ Created by **Anas Mohamed** as part of a developer challenge / personal growth p
 2. Navigate into the project  
    `cd TaskManagerApi`
 
-3. Restore dependencies/ Rebuild Solution  
+3. Restore dependencies / Rebuild solution  
    `dotnet restore`
 
 4. Run the application  
+   `dotnet run`
 
 5. Open Swagger UI in your browser:  
-   👉 [https://localhost:7007/swagger](https://localhost:7007/swagger)
+   👉 [https://localhost:7017/swagger](https://localhost:7017/swagger)
 
 ---
 
@@ -66,3 +70,43 @@ Created by **Anas Mohamed** as part of a developer challenge / personal growth p
   "status": "In Progress",
   "dueDate": "2025-04-15T18:00:00"
 }
+```
+
+---
+
+## 🧪 Unit Testing
+
+This API is unit tested using:
+- **xUnit** – for writing tests
+- **Moq** – for mocking `HttpClient` and simulating API responses
+
+Test coverage includes:
+- Retrieving all tasks
+- Getting a task by ID
+- Creating a task
+
+To run the tests:
+```bash
+dotnet test
+```
+
+---
+
+## 📖 API Documentation
+
+Swagger UI is enabled and documents all routes with request/response samples. 
+Navigate to: `https://localhost:7017/swagger/index.html`
+
+---
+
+## 📦 Future Improvements
+
+- Add authentication (JWT)
+- Extend validation logic
+- Add integration tests
+- Add pagination/filtering support
+
+---
+
+## 🔗 Related
+- Frontend repo: [TaskManagerFrontend](https://github.com/aamohamedo/TaskManagerFrontend)
